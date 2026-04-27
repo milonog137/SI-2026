@@ -134,11 +134,26 @@ Stały zbiór przypadków jest wymagany, ponieważ utrzymuje wspólną powierzch
 
 Na podstawie pierwszego porównania wykonaj analizę wszystkich 6 przypadków.
 
-Twoim zadaniem jest:
+Twoim zadaniem nie jest wskazanie, która odpowiedź "brzmi lepiej".
+Masz ustalić, jaki typ różnicy widać między `v0` i `v1`, a potem poprzeć ocenę konkretnym dowodem z odpowiedzi.
 
-- wskazać, gdzie `v1` daje rzeczywistą poprawę,
-- wskazać, gdzie `v1` pozostaje niewystarczające,
-- odrzucić co najmniej jedno słabsze wyjaśnienie poprawy.
+Dla każdego przypadku określ:
+
+1. Czy `v1` jest lepsze, bez zmian, gorsze albo niejasne.
+2. Jakiego typu jest różnica:
+   - `format`,
+   - `wykonanie polecenia`,
+   - `bezpieczeństwo / uczciwość`,
+   - `jakość merytoryczna`,
+   - `ograniczenie systemu`,
+   - `niejasne`.
+3. Jaki jest efekt:
+   - `realna poprawa`,
+   - `głównie forma`,
+   - `regres`,
+   - `bez zmian`,
+   - `niejasne`.
+4. Jaki jest najkrótszy dowód z `v0` i `v1`.
 
 W analizie opieraj się wyłącznie na:
 
@@ -146,6 +161,14 @@ W analizie opieraj się wyłącznie na:
 - treści kontraktu zadania `v1`,
 - jawnych sprawdzeniach w `compare.md`,
 - własnej ocenie jakości odpowiedzi.
+
+Pamiętaj:
+
+- sam format zwykle nie wystarcza jako dowód realnej poprawy,
+- wykonanie konkretnego polecenia jest mocniejszym dowodem,
+- uczciwe pokazanie braku danych albo niepewności jest mocnym dowodem,
+- jakość merytoryczna wymaga najdokładniejszego uzasadnienia,
+- jeżeli kontrakt poprawił tylko część problemu, nazwij ograniczenie systemu.
 
 Jeżeli nie wiesz, od których przypadków zacząć, zacznij od:
 
@@ -188,6 +211,9 @@ Po ponownym uruchomieniu oceń, czy zmiana:
 - dała efekt głównie kosmetyczny,
 - nadal pozostaje niejasna.
 
+Ta zmiana także wymaga dowodu. Nie wystarczy napisać, że dodałeś lub dodałaś nową regułę i model ją wykonał.
+Pokaż, co konkretnie zmieniło się w odpowiedzi na wybranym `case_id`.
+
 ### 5. Raport
 
 Na końcu uzupełnij [imie_nazwisko_1.md](./imie_nazwisko_1.md).
@@ -200,26 +226,36 @@ Do repozytorium należy zacommitować już raport pod właściwą nazwą pliku s
 
 Raport jest obowiązującym formatem oddania pracy. Wypełnij go w tej kolejności:
 
-1. `Szybka mapa przypadków`  
-   Wypełnij tabelę dla wszystkich 6 przypadków.
+1. `Jak oceniać różnicę`  
+   Przeczytaj tę sekcję przed wypełnianiem raportu. Ona definiuje typy różnic i mówi, które dowody są mocne, a które słabe.
 
-2. `Główny argument`  
-   Wskaż:
-   - dwa najmocniejsze usprawnienia w `v1`,
-   - jedno pozostałe ograniczenie,
-   - jedno odrzucone słabsze wyjaśnienie.
+2. `Mapa przypadków`  
+   Wypełnij tabelę dla wszystkich 6 przypadków. Używaj dozwolonych wartości z szablonu i podaj krótki dowód dla każdego przypadku.
 
-3. `Ocena końcowa`  
+3. `Najmocniejsze dowody poprawy`  
+   Wybierz dwa przypadki, w których masz najlepszy dowód, że `v1` naprawdę pomogło. Nie wybieraj przypadku tylko dlatego, że odpowiedź jest krótsza albo ma listę.
+
+4. `Najważniejsze ograniczenie`  
+   Wybierz jeden przypadek, który najlepiej pokazuje, czego sam kontrakt zadania nadal nie rozwiązuje.
+
+5. `Odrzucone słabsze wyjaśnienie`  
+   Wskaż jedno kuszące, ale za słabe wyjaśnienie, np. "v1 jest lepsze, bo jest krótsze", i pokaż lepsze wyjaśnienie na podstawie dowodu.
+
+6. `Werdykt`  
    Wpisz w polu `werdykt` dokładnie jedną z tych wartości:
    - `v1 wyraźnie pomogło`
    - `v1 trochę pomogło`
    - `v1 jest głównie kosmetyczne`
    - `na podstawie tych dowodów nie wiadomo`
 
-4. `Wymagana ograniczona zmiana`  
+7. `Ograniczona zmiana`  
    Opisz:
    - co zmieniłeś lub zmieniłaś,
-   - co zmieniło się w odpowiedziach,
+   - którego `case_id` dotyczyła zmiana,
+   - jaki typ różnicy miała poprawić,
+   - co zmieniło się w odpowiedzi przed i po zmianie,
    - czy zmiana faktycznie pomogła.
 
-5. `Jak doszedłem lub doszłam do wniosku`
+8. `Czego te wyniki jeszcze nie dowodzą`  
+   Wpisz 2-4 krótkie ograniczenia swojej analizy.
+
