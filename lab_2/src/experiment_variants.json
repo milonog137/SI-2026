@@ -1,0 +1,34 @@
+{
+  "variants": [
+    {
+      "id": "no_context",
+      "label": "Brak lokalnego kontekstu",
+      "context_mode": "none",
+      "evidence_instruction": false
+    },
+    {
+      "id": "all_context",
+      "label": "Wszystkie źródła",
+      "context_mode": "all_sources",
+      "evidence_instruction": false
+    },
+    {
+      "id": "selected_context",
+      "label": "Dobry ręczny context pack",
+      "context_mode": "selected",
+      "evidence_instruction": false
+    },
+    {
+      "id": "selected_context_with_evidence_instruction",
+      "label": "Dobry context pack plus instrukcja wskazywania źródeł",
+      "context_mode": "selected",
+      "evidence_instruction": true
+    },
+    {
+      "id": "bad_context",
+      "label": "Celowo zły context pack",
+      "context_mode": "bad",
+      "evidence_instruction": false
+    }
+  ]
+}
