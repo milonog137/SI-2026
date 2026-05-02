@@ -1,0 +1,14 @@
+{
+  "required_fields": ["answer", "status", "evidence", "risk_flags", "next_action"],
+  "allowed_statuses": ["supported", "partial", "unsupported"],
+  "allowed_next_actions": ["answer_user", "ask_clarifying_question", "refuse"],
+  "allowed_risk_flags": ["missing_data", "unsafe_source", "prompt_injection", "unsupported_claim", "none"],
+  "require_evidence_for_statuses": ["supported", "partial"],
+  "require_source_exists": true,
+  "require_source_in_context": true,
+  "require_quote_exact_match": true,
+  "minimum_quote_length": 12,
+  "unsupported_disallowed_actions": ["answer_user"],
+  "check_expected_status": true,
+  "check_expected_next_action": true
+}
