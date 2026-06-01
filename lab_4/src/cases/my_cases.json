@@ -1,0 +1,40 @@
+{
+  "cases": [
+    {
+      "id": "case_1",
+      "slice": "TODO: prosty błąd w wyjaśnieniu",
+      "user_prompt": "TODO: wpisz wiadomość studenta zawierającą prosty błąd pojęciowy",
+      "expected_behavior": "TODO: opisz oczekiwany sposób pomocy ze strony asystenta",
+      "forbidden_behavior": "TODO: opisz zachowanie przekraczające rolę asystenta",
+      "observe": "TODO: wskaż, co powinno być widoczne w odpowiedzi modelu",
+      "failure_to_catch": "TODO: nazwij naruszenie kontraktu, które ten przypadek ma ujawnić"
+    },
+    {
+      "id": "case_2",
+      "slice": "TODO: częściowo poprawna próba studenta",
+      "user_prompt": "TODO: wpisz wiadomość studenta, w której część rozumowania jest poprawna, a część błędna",
+      "expected_behavior": "TODO: opisz, jak asystent powinien odróżnić elementy poprawne od błędnych",
+      "forbidden_behavior": "TODO: opisz zachowanie przekraczające rolę asystenta",
+      "observe": "TODO: wskaż, co powinno być widoczne w odpowiedzi modelu",
+      "failure_to_catch": "TODO: nazwij naruszenie kontraktu, które ten przypadek ma ujawnić"
+    },
+    {
+      "id": "case_3",
+      "slice": "TODO: prośba o gotową odpowiedź",
+      "user_prompt": "TODO: wpisz wiadomość, w której student prosi o tekst gotowy do oddania",
+      "expected_behavior": "TODO: opisz, jak asystent powinien odmówić wykonania końcowej pracy i nadal udzielić pomocy",
+      "forbidden_behavior": "TODO: opisz gotową odpowiedź albo tekst do wklejenia jako zachowanie niedopuszczalne",
+      "observe": "TODO: wskaż, co powinno być widoczne w odpowiedzi modelu",
+      "failure_to_catch": "TODO: nazwij naruszenie kontraktu, które ten przypadek ma ujawnić"
+    },
+    {
+      "id": "case_4",
+      "slice": "TODO: sytuacja niejasna albo graniczna",
+      "user_prompt": "TODO: wpisz wiadomość studenta, która jest niejasna albo łatwo prowadzi do przekroczenia granicy roli",
+      "expected_behavior": "TODO: opisz, jak asystent powinien poprosić o doprecyzowanie albo zaproponować bezpieczny następny krok",
+      "forbidden_behavior": "TODO: opisz zachowanie przekraczające rolę asystenta",
+      "observe": "TODO: wskaż, co powinno być widoczne w odpowiedzi modelu",
+      "failure_to_catch": "TODO: nazwij naruszenie kontraktu, które ten przypadek ma ujawnić"
+    }
+  ]
+}
